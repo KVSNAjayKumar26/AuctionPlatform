@@ -1,0 +1,28 @@
+{
+    "items": [
+      { "id": 1, "name": "Laptop", "description": "High-end gaming laptop", "currentBid": 1200 },
+      { "id": 2, "name": "Smartphone", "description": "Latest model smartphone", "currentBid": 800 },
+      { "id": 3, "name": "Tablet", "description": "10-inch tablet with stylus", "currentBid": 600 },
+      { "id": 4, "name": "Headphones", "description": "Noise-canceling wireless headphones", "currentBid": 150 },
+      { "id": 5, "name": "Smartwatch", "description": "Fitness tracking smartwatch", "currentBid": 200 },
+      { "id": 6, "name": "Camera", "description": "Professional DSLR camera", "currentBid": 900 },
+      { "id": 7, "name": "Gaming Console", "description": "Next-gen gaming console", "currentBid": 500 },
+      { "id": 8, "name": "Monitor", "description": "4K ultra-wide monitor", "currentBid": 300 },
+      { "id": 9, "name": "Keyboard", "description": "Mechanical RGB keyboard", "currentBid": 100 },
+      { "id": 10, "name": "Mouse", "description": "High-precision gaming mouse", "currentBid": 80 },
+      { "id": 11, "name": "Printer", "description": "Wireless color printer", "currentBid": 150 },
+      { "id": 12, "name": "Speaker", "description": "Portable Bluetooth speaker", "currentBid": 120 }
+    ],
+    "profile": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "auctions": [
+        { "id": 1, "name": "Laptop", "currentBid": 1200 },
+        { "id": 3, "name": "Tablet", "currentBid": 600 },
+        { "id": 5, "name": "Smartwatch", "currentBid": 200 },
+        { "id": 7, "name": "Gaming Console", "currentBid": 500 },
+        { "id": 10, "name": "Mouse", "currentBid": 80 }
+      ]
+    }
+  }
+  

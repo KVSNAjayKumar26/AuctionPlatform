@@ -1,0 +1,122 @@
+// Variables for colors and reusable styles
+$primary-color: #ff4500;
+$secondary-color: #f0f0f0;
+$accent-color: #00bfff;
+$text-color: #333;
+$hover-bg-color: lighten($primary-color, 15%);
+$border-radius: 8px;
+
+// General styling for the bid history component
+.bid-history-container {
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  
+  h2 {
+    color: $primary-color;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th, td {
+      text-align: left;
+      padding: 12px 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      color: $text-color;
+    }
+
+    th {
+      background-color: $primary-color;
+      color: white;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: $secondary-color;
+    }
+
+    // Zebra stripe effect for rows
+    tr:nth-child(even) {
+      background-color: lighten($secondary-color, 5%);
+    }
+
+    // Hover effect on rows
+    tr:hover {
+      background-color: $hover-bg-color;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+}
+
+// Styling for individual bid entries
+.bid-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  
+  &:nth-child(even) {
+    background-color: lighten($secondary-color, 5%);
+  }
+  
+  &:hover {
+    background-color: $hover-bg-color;
+    transition: background-color 0.3s ease;
+  }
+
+  .bidder-name {
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  .bid-amount {
+    color: $primary-color;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .bid-time {
+    font-size: 0.9rem;
+    color: darken($text-color, 20%);
+  }
+}
+
+// Responsive design for small screens
+@media screen and (max-width: 768px) {
+  .bid-history-container {
+    padding: 10px;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+// Animation using keyframes for new bids
+@keyframes new-bid {
+  0% {
+    background-color: $primary-color;
+    color: white;
+  }
+  100% {
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+}
+
+// Apply the animation to newly added bid entries
+.new-bid-entry {
+  animation: new-bid 0.8s ease-in-out;
+}

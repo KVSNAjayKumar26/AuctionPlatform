@@ -1,0 +1,65 @@
+$primary-color: #ff4500;
+$secondary-color: #f0f0f0;
+$accent-color: #00bfff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1rem;
+    }
+}
+
+.auction-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.auction-item {
+    background-color: $secondary-color;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.item-detail {
+    padding: 20px;
+    .place-bid {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .auction-container {
+        grid-template-columns: 1fr;
+    }
+}
